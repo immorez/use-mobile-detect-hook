@@ -1,5 +1,3 @@
-const { useEffect } = require('react');
-
 const getMobileDetect = userAgent => {
   const isAndroid = () => Boolean(userAgent.match(/Android/i));
   const isIos = () => Boolean(userAgent.match(/iPhone|iPad|iPod/i));
@@ -18,7 +16,6 @@ const getMobileDetect = userAgent => {
   };
 };
 const useMobileDetect = () => {
-  useEffect(() => {}, []);
   const userAgent = typeof navigator === 'undefined' ? 'SSR' : navigator.userAgent;
   return getMobileDetect(userAgent);
 };
